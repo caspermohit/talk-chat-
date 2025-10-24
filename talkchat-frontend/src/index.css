@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; margin:0; background:#f5f6f8; color:#222; }
+.container { max-width:900px; margin:20px auto; }
+form { max-width:420px; margin:20px auto; padding:18px; background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
+input, textarea { width:100%; padding:10px; margin:8px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; }
+button { padding:10px 14px; background:#007bff; color:#fff; border:none; border-radius:6px; cursor:pointer; }
+button.secondary { background:#6c757d; }
+.link-btn { background:none; border:none; color:#007bff; cursor:pointer; padding:0; }
+.chat-box { max-width:800px; margin:20px auto; background:#fff; padding:12px; border-radius:8px; height:420px; overflow:auto; border:1px solid #e6e6e6; }
+.message {     margin-bottom: 8px; padding: 8px; border-radius: 70px; background: #bad9f9; width: 50%;}
+.own-message {   margin-bottom: 8px; padding: 8px; border-radius: 70px; background: #bad9f9; width: 50%;margin-left: 48%;}   
+.other-message {    margin-bottom: 8px; padding: 8px; border-radius: 70px;background: #f0f0f0; width: 50%; margin-right: 48%; }
