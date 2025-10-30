@@ -15,7 +15,7 @@
     margin-left: 0px;
     font-size: 24px;
     font-weight: 600;
-    color: skyblue;
+    color: #233d79;
 }
 
 .navbar-right {
@@ -26,7 +26,7 @@
     margin-right: 0px;
     font-size: 16px;
     font-weight: 600;
-    color: skyblue;
+    color: #233d79;
 }
 
 .primary-button {
@@ -34,7 +34,7 @@
     align-items: center;
     text-decoration: none;
     color: white;
-    background-color: skyblue;
+    background-color: #233d79;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;

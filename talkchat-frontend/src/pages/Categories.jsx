@@ -20,9 +20,9 @@ export default function Categories(){
   return (
     <div className="container">
       <h2>Categories</h2>
-      <div style={{display:'grid',gap:10}}>
+      <div className="categories-container">
         {cats.map(c => (
-          <Link key={c.id} to={`/chat/${c.id}`} style={{padding:12, background:'#007bff', color:'#fff', borderRadius:8, textDecoration:'none'}}>{c.name}</Link>
+          <Link key={c.id} to={`/chat/${c.id}`} className="category-item">{c.name}</Link>
         ))}
       </div>
     </div>

@@ -1,8 +1,11 @@
 import React, {useEffect, useState, useRef} from "react";
 import { useParams } from "react-router-dom";
 import api from "../api";
+import Categories from "./Categories";
+import { Link } from "react-router-dom";
 
 export default function Chat(){
+  const [cats, setCats] = useState([]);
   const { categoryId } = useParams();
   const [messages, setMessages] = useState([]);
   const [content, setContent] = useState('');
@@ -27,6 +30,17 @@ export default function Chat(){
       }
     }
   };
+  useEffect(()=>{
+    const fetch = async () => {
+      try{
+        const res = await api.get('/categories');
+        setCats(res.data.categories);
+      }catch(err){
+        console.error(err);
+      }
+    };
+    fetch();
+  },[]);
   useEffect(()=>{
     dataCategory();
   },[categoryId,]);
@@ -69,8 +83,17 @@ export default function Chat(){
 
   
   return (
-    <div className="container">
-    
+    <div className="chat-container">
+    <div className="container-left">
+    <h2>Select a Category</h2>
+  
+    <div className="categories-list">
+        {cats.map(c => (
+          <Link key={c.id} to={`/chat/${c.id}`} className="category-list">{c.name}</Link>
+        ))}
+      </div>
+    </div>
+    <div className="container-right">
       <h2>Chat Room - {categoryName}</h2>
       <div className="chat-box" ref={boxRef}>
         {messages.map((m, i) => {
@@ -100,6 +123,7 @@ export default function Chat(){
         />
         <button type="submit">Send</button>
       </form>
+    </div>
     </div>
   );
 }
