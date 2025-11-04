@@ -45,8 +45,8 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<Categories />} />
-          <Route path="/chat/:categoryId" element={<Chat />} />
+          <Route path="/chat" element={token ? <Categories /> : <Navigate to="/login" />} />
+          <Route path="/chat/:categoryId" element={token ? <Chat /> : <Navigate to="/login" />} />
           <Route path="/categories" element={token ? <Categories /> : <Navigate to="/login" />} />
           <Route path="/login" element={token ? <Navigate to="/categories" /> : <Login />} />      
           <Route path="/register" element={token ? <Navigate to="/categories" /> : <Register />} />

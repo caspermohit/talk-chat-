@@ -114,9 +114,8 @@ export default function Chat(){
         })}
       </div>
 
-      <form onSubmit={send} style={{maxWidth:800, margin:'12px auto', display:'flex', gap:8}}>
+      <form className="chat-form" onSubmit={send}>
         <input
-          style={{flex:1}}
           value={content}
           onChange={e => setContent(e.target.value)}
           placeholder="Type a message..."

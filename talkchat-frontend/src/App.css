@@ -8,7 +8,8 @@
 }
 
 :root {
-  --primary-color: #233d79;
+  
+  --primary-color: #233e79;
   --secondary-color: #afbede;
   --tertiary-color: #000851;
   --quaternary-color: #1cb5e0;
@@ -18,6 +19,7 @@
   --octonary-color: #1cb5e0;
   --nonary-color: #4e54c8;
   --denary-color: #8f94fb;
+  --text-color: #ffffff;
   
 }
 
@@ -62,9 +64,7 @@ form {
   max-width: 400px;
   margin: 0 auto;
   padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f9f9f9;
+  
 }
 
 form h2 {
@@ -323,36 +323,89 @@ form button:disabled {
 }
 
 .chat-container {
-
   display: flex;
   flex-direction: row;
   width: 100%;
-
+  height: 100vh;
+  overflow: hidden;
 }
 
 .category-list {
-  margin: 22px;
-  padding: 10px;
-  border: 2px dashed orange;
-  border-radius: 19px;
+  margin: 13px 13px 13px 13px;
+  padding: 13px 13px 13px 13px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 1px;
   text-decoration: none;
   font-size: 25px;
+  color:var(--text-color);
+
+  
 }
 .container-left {
   flex: 1;
-  background-color:rgb(222, 219, 219);
+  background-color:var(--primary-color);
+  color:var(--text-color);
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container-left h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
 }
 .container-right {
   flex: 2;
- 
+  background-color:var(--secondary-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.chat-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+.chat-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.chat-form button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.chat-form button:hover {
+  background-color: #0056b3;
+}
+
+.container-right h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #333;
+}
 .categories-list {
   display: flex;
   flex-direction: column;
- 
-  
 }
-.category-list { 
-
- }
